@@ -6,6 +6,6 @@ It features blurrying effect when the user starts typing the password.
 The mountains picture is from [Stephan Seeber's](https://www.pexels.com/@stywo) portfolio.
 ### Screenshots
 
-![](https://raw.githubusercontent.com/mrazr/lightdm-webkit-theme-wisp/master/screenshot1.png)
+![](https://raw.githubusercontent.com/mrazr/lightdm-webkit-theme-wisp/blurry/screenshot1.png)
 
-![](https://raw.githubusercontent.com/mrazr/lightdm-webkit-theme-wisp/master/screenshot2.png)
+![](https://raw.githubusercontent.com/mrazr/lightdm-webkit-theme-wisp/blurry/screenshot2.png)
