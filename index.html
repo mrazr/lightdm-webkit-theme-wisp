@@ -16,7 +16,8 @@
 
 			<form id="login-form">
 				<select id="user" tabindex="1"></select>
-				<input id="password" type="password" tabindex="2" autofocus
+				<select id="sessions_list" tabindex="2"></select>
+				<input id="password" type="password" tabindex="3" autofocus
 					v-model="password"
 					v-attr="disabled: !passwordPrompt"
 					v-el="password" />

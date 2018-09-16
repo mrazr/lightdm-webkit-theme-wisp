@@ -4,7 +4,9 @@ var login = (function (lightdm) {
 		default_avatar = 'images/default-avatar.png',
 		selected_user = null,
 		password = null,
+		sessions_list = document.getElementById('sessions_list'),
 		debug = false;
+	var selected_session = lightdm.default_session;
 
 	// Private functions
 	var debug_msg = function(msg) {
@@ -33,6 +35,23 @@ var login = (function (lightdm) {
 				debug_msg('User `'+username+'` found');
 			}
 		}
+	};
+
+	var setup_sessions_list = function() {
+		var list = sessions_list;
+		var idx = 0;
+		for (var i = 0; i < lightdm.sessions.length; ++i){
+			var sessionName = lightdm.sessions[i].name;
+			var sessionKey = lightdm.sessions[i].key;
+			if (sessionKey === selected_session){
+				idx = i;
+			}
+			list.insertAdjacentHTML(
+				'beforeend',
+				'<option value="'+sessionKey+'">'+sessionName+'</option>'
+			);
+		}
+		sessions_list.options[idx].selected = 'selected';
 	};
 
 	var select_user_from_list = function (idx) {
@@ -87,7 +106,7 @@ var login = (function (lightdm) {
 			debug_msg('Logged in');
 			lightdm.login(
 				lightdm.authentication_user,
-				lightdm.default_session
+				selected_session
 			);
 		} else {
 			pass.value = '';
@@ -109,6 +128,7 @@ var login = (function (lightdm) {
 
 		setup_users_list();
 		select_user_from_list();
+		setup_sessions_list();
 
 		user.addEventListener('change', function (e) {
 			e.preventDefault();
@@ -117,6 +137,10 @@ var login = (function (lightdm) {
 			select_user_from_list(idx);
 		});
 
+		sessions_list.addEventListener('change', function() {
+			selected_session = sessions_list.value;
+			document.getElementById('password').focus();
+		});
 		document.getElementById('login-form').addEventListener('submit', function (e) {
 			debug_msg('Form submitted');
 			e.preventDefault();

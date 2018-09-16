@@ -89,6 +89,10 @@ input:focus {
 	font-size: 10vh;
 }
 
+#sessions_list {
+	font-size: 3vh;
+}
+
 #password {
 	font-size: 5vh;
 	font-weight: 900;
