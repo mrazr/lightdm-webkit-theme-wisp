@@ -1,12 +1,11 @@
-## Wisp Theme
+## A blurry take on the Wisp theme
+This theme is a modification of codehearts' Wisp theme: https://github.com/codehearts/lightdm-webkit-theme-wisphttps://github.com/codehearts/lightdm-webkit-theme-wisp
 
-An airy theme for LightDM. [Try the demo](http://codehearts.github.io/lightdm-webkit-theme-wisp/) and see if you like it!
+It features blurrying effect when the user starts typing the password.
 
-![](https://raw.githubusercontent.com/codehearts/lightdm-webkit-theme-wisp/master/screenshot.png)
+The mountains picture is from [Stephan Seeber's](https://www.pexels.com/@stywo) portfolio.
+### Screenshots
 
-This theme allows for switching users, but not graphical sessions. It also features shutdown/restart/sleep buttons.
+![](https://raw.githubusercontent.com/mrazr/lightdm-webkit-theme-wisp/master/screenshot1.png)
 
-### Roadmap
-- [ ] Keyboard shortcuts for power actions
-- [ ] Keyboard shortcuts for user switching
-- [ ] Graphical session choice support
+![](https://raw.githubusercontent.com/mrazr/lightdm-webkit-theme-wisp/master/screenshot2.png)
